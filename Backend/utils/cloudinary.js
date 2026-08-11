@@ -1,4 +1,4 @@
-import {v2 as cloudinary} from 'cloudinary';
+import { v2 as cloudinary } from 'cloudinary';
 import fs from 'fs';
 
 // Configure Cloudinary
@@ -20,7 +20,7 @@ export async function uploadToCloudinary(filePath, folder = 'Doctor') {
         fs.unlinkSync(filePath);
         return result;
     }
-    catch(err) {
+    catch (err) {
         console.error("Cloudinary upload error:", err);
         throw err;
     }
@@ -29,10 +29,10 @@ export async function uploadToCloudinary(filePath, folder = 'Doctor') {
 // Delete an image that is present in Cloudinary if user rmeoves from the UI
 export async function deleteFromCloudinary(publicId) {
     try {
-        if(!publicId) return;
+        if (!publicId) return;
         await cloudinary.uploader.destroy(publicId);
     }
-    catch(err) {
+    catch (err) {
         console.error("Cloudinary delete error:", err);
         throw err;
     }

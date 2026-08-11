@@ -211,7 +211,7 @@ export async function updateService(req, res) {
             new: true,
             runValidators: true
         });
-        if(!updated) {
+        if (!updated) {
             return res.status(500).json({
                 success: false,
                 message: "Failed to update service"
@@ -236,8 +236,8 @@ export async function updateService(req, res) {
 // Delete a service
 export async function deleteService(req, res) {
     try {
-        const {id} = req.params;
-        if(!id) {
+        const { id } = req.params;
+        if (!id) {
             return res.status(400).json({
                 success: false,
                 message: "Service ID is required"
@@ -245,14 +245,14 @@ export async function deleteService(req, res) {
         }
 
         const existing = await Service.findById(id);
-        if(!existing) {
+        if (!existing) {
             return res.status(404).json({
                 success: false,
                 message: "Service not found"
             });
         }
 
-        if(existing.imagePublicId) {
+        if (existing.imagePublicId) {
             try {
                 await deleteFromCloudinary(existing.imagePublicId);
             } catch (err) {

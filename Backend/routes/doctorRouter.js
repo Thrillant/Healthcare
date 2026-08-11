@@ -1,13 +1,13 @@
 import express from 'express';
 import upload from '../middlewares/multer.js';
 
-import { 
-    createDoctor, 
-    doctorLogin, 
-    getDoctorById, 
-    getDoctors, 
-    updateDoctor, 
-    toggleAvailability, 
+import {
+    createDoctor,
+    doctorLogin,
+    getDoctorById,
+    getDoctors,
+    updateDoctor,
+    toggleAvailability,
     deleteDoctor
 } from '../controllers/doctorController.js';
 

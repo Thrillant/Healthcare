@@ -31,12 +31,12 @@ const doctorSchema = new mongoose.Schema({
 
     fee: { type: Number, default: 0 },
     availability: {
-    type: String,
+        type: String,
         enum: ["Available", "Unavailable"],
         default: "Available",
-        },
+    },
 
-    schedule: { type: Map, of: [String], default: { } },
+    schedule: { type: Map, of: [String], default: {} },
     success: { type: String, default: "" },
     patients: { type: String, default: "" },
     rating: { type: Number, default: 0 },
@@ -44,7 +44,7 @@ const doctorSchema = new mongoose.Schema({
     timestamps: true,
 });
 
-doctorSchema.index({name: "text", specialization: "text"}); //Text Search
+doctorSchema.index({ name: "text", specialization: "text" }); //Text Search
 const Doctor = mongoose.models.Doctor || mongoose.model("Doctor", doctorSchema);
 
 export default Doctor;
