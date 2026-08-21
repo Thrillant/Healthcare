@@ -11,7 +11,7 @@ cloudinary.config({
 // Upload files to Cloudinary
 export async function uploadToCloudinary(filePath, folder = 'Doctor') {
     try {
-        const result = await cloudinary.uploader(filePath, {
+        const result = await cloudinary.uploader.upload(filePath, {
             folder,
             resource_type: "image"
         });
