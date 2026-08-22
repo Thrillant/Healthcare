@@ -7,6 +7,9 @@ import Add from './pages/Add.jsx';
 import List from './pages/List.jsx';
 import Appointment from './pages/Appointment.jsx';
 import ServiceDashboard from './pages/ServiceDashboard.jsx';
+import AddService from './pages/AddService.jsx';
+import ListService from './pages/ListService.jsx';
+import ServiceAppointments from './pages/ServiceAppointments.jsx';
 
 
 function RequireAuth({ children }) {
@@ -60,6 +63,21 @@ const App = () => {
         <Route path='/service-dashboard' element={
           <RequireAuth>
             <ServiceDashboard />
+          </RequireAuth>} />
+          
+        <Route path='/add-service' element={
+          <RequireAuth>
+            <AddService />
+          </RequireAuth>} />
+          
+        <Route path='/list-service' element={
+          <RequireAuth>
+            <ListService />
+          </RequireAuth>} />
+        
+        <Route path='/service-appointments' element={
+          <RequireAuth>
+            <ServiceAppointments />
           </RequireAuth>} />
       </Routes>
     </div>
