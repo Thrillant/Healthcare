@@ -118,27 +118,27 @@ export const bannerStyles = {
   
   // Features grid
   featuresGrid: "grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-sm sm:text-base",
-  featureItem: "flex items-center justify-center lg:justify-start bg-linear-to-br from-green-500 to-green-200 backdrop-blur-sm p-3 rounded-full shadow-sm border",
-  featureIcon: "w-5 h-5 text-white mr-3",
+  featureItem: "flex items-center justify-center lg:justify-start backdrop-blur-sm p-3 rounded-full shadow-sm border",
+  featureIcon: "w-5 h-5 mr-3",
   featureText: "text-gray-700 font-medium",
   
   // Feature border colors
-  featureBorderGreen: "border-green-100",
-  featureBorderBlue: "border-blue-100",
-  featureBorderEmerald: "border-emerald-100",
-  featureBorderPurple: "border-purple-100",
+  featureBorderGreen: "border-green-200 bg-green-50 text-green-600",
+  featureBorderBlue: "border-blue-200 bg-blue-50 text-blue-600",
+  featureBorderEmerald: "border-emerald-200 bg-emerald-50 text-emerald-600",
+  featureBorderPurple: "border-purple-200 bg-purple-50 text-purple-600",
   
   // CTA Buttons container
   ctaButtonsContainer: "flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start",
   
   // Book appointment button
-  bookButton: "group relative lg:whitespace-nowrap bg-linear-to-r from-green-500 to-emerald-300 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold transform transition-all duration-300 shadow-2xl hover:shadow-3xl overflow-hidden text-sm sm:text-base",
+  bookButton: "group relative lg:whitespace-nowrap border-2 border-transparent bg-linear-to-r from-green-500 to-emerald-400 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold transform transition-all duration-300 shadow-xl hover:shadow-2xl overflow-hidden text-sm sm:text-base",
   bookButtonOverlay: "absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000",
   bookButtonContent: "relative flex items-center justify-center gap-2",
   bookButtonIcon: "w-4 h-4 sm:w-5 sm:h-5",
   
   // Emergency call button
-  emergencyButton: "group border-2 lg:whitespace-nowrap border-red-400 text-red-600 bg-red-300 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold transform transition-all duration-300 backdrop-blur-sm hover:shadow-lg hover:bg-red-400/80 text-sm sm:text-base",
+  emergencyButton: "group border-2 lg:whitespace-nowrap border-rose-400 text-rose-600 bg-rose-50 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold transform transition-all duration-300 backdrop-blur-sm hover:shadow-xl hover:bg-rose-100 text-sm sm:text-base",
   emergencyButtonContent: "flex items-center justify-center gap-2",
   emergencyButtonIcon: "w-4 h-4 sm:w-5 sm:h-5",
   
