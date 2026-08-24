@@ -166,13 +166,13 @@ const HomeDoctors = () => {
                                     >
                                         <div className={hds.imageContainerAvailable}>
                                             <img
-                                                src={doc.image || "/placeholder-doctor.jpg"}
+                                                src={doc.image || "/placeholder-doctor.svg"}
                                                 alt={doc.name}
                                                 loading="lazy"
                                                 className={hds.image}
                                                 onError={(e) => {
                                                     e.currentTarget.onerror = null;
-                                                    e.currentTarget.src = "/placeholder-doctor.jpg";
+                                                    e.currentTarget.src = "/placeholder-doctor.svg";
                                                 }}
                                             />
                                         </div>
@@ -180,13 +180,13 @@ const HomeDoctors = () => {
                                 ) : (
                                     <div className={hds.imageContainerNotAvailable}>
                                         <img
-                                            src={doc.image || "/placeholder-doctor.jpg"}
+                                            src={doc.image || "/placeholder-doctor.svg"}
                                             alt={doc.name}
                                             loading="lazy"
                                             className={hds.image}
                                             onError={(e) => {
                                                 e.currentTarget.onerror = null;
-                                                e.currentTarget.src = "/placeholder-doctor.jpg";
+                                                e.currentTarget.src = "/placeholder-doctor.svg";
                                             }}
                                         />
 
