@@ -12,8 +12,8 @@ const app = express();
 const port = 3000;
 
 const allowedOrigins = [
-    "http://localhost:5173",
-    "http://localhost:5174",
+    "https://healthcare-frontend-y0qb.onrender.com",
+    "https://healthcare-admin-odj2.onrender.com",
 ]
 
 // Middlewares
