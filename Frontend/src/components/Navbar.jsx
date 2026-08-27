@@ -110,7 +110,7 @@ const Navbar = () => {
                         {/* Right Side */}
                         <div className={navbarStyles.rightContainer}>
                             <Show when="signed-out">
-                                <Link to='/doctor-admin-login' className={navbarStyles.doctorAdminButton}>
+                                <Link to='/doctor-admin/login' className={navbarStyles.doctorAdminButton}>
                                     <UserRound className={navbarStyles.doctorAdminIcon} />
                                     <span className={navbarStyles.doctorAdminText}>
                                         Doctor Admin

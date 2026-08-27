@@ -91,20 +91,20 @@ export const getAppointments = async (req, res) => {
 export const getAppointmentByPatient = async (req, res) => {
     try {
         const queryCreatedBy = req.query.createdBy || null;
-        const clerkUserId = req.auth?.userId || null;
+        const clerkUserId = resolveClerkUserId(req);
         const resolvedCreatedBy = queryCreatedBy || clerkUserId || null;
 
         console.log("resolvedCreatedBy (query or req.auth.userId):", resolvedCreatedBy);
 
         if (!resolvedCreatedBy && !req.query.mobile) {
-            return res.status(403).json({ success: false, message: "Authentication required" });
+            return res.json({ success: true, appointments: [] });
         }
 
         const filter = {};
         if (resolvedCreatedBy) filter.createdBy = resolvedCreatedBy;
         if (req.query.mobile) filter.mobile = req.query.mobile;
 
-        const appointments = await Appointment.find(filter).sort({ date: 1, time: 1 }).lean();
+        const appointments = await Appointment.find(filter).populate("doctorId", "name specialization imageUrl image fee experience").sort({ date: 1, time: 1 }).lean();
         return res.json({ success: true, appointments });
     }
     catch (err) {

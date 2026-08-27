@@ -517,9 +517,10 @@ export const getServiceAppointmentByPatient = async (req, res) => {
         if (resolvedCreatedBy) filter.createdBy = resolvedCreatedBy;
         if (mobile) filter.mobile = mobile;
 
-        const list = await ServiceAppointment.find(filter).sort({ createdAt: -1 }).lean();
+        const list = await ServiceAppointment.find(filter).populate("serviceId", "name image imageUrl imageSmall price fees description").sort({ createdAt: -1 }).lean();
         return res.json({
             success: true,
+            appointments: list,
             data: list,
             message: "Appointments list fetched successfully"
         });

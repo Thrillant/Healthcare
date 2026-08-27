@@ -1001,6 +1001,7 @@ export const doctorDetailStyles = {
   headerBackButton: "inline-flex items-center gap-2 px-2 xl:px-4 lg:px-4 py-2 bg-white text-emerald-600 border border-emerald-200 rounded-full hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300 shadow-sm hover:shadow-md",
   headerBackButtonIcon: "size={18}",
   headerBackButtonText: "font-medium",
+  headerTitleContainer: "flex items-center gap-3",
   headerTitle: "text-sm md:text-2xl lg:text-xl xl:text-2xl whitespace-nowrap font-bold bg-linear-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
   headerRatingContainer: "flex items-center gap-2 px-2 py-2 bg-white rounded-full shadow-sm border border-amber-100",
   headerRatingIcon: "text-amber-400 fill-current",
@@ -1031,6 +1032,7 @@ export const doctorDetailStyles = {
   
   // Right column (doctor info)
   rightColumn: "lg:col-span-2 space-y-6",
+  doctorNameContainer: "space-y-3",
   doctorName: "text-2xl md:text-2xl lg:text-3xl xl:text-3xl sm:text-4xl font-bold bg-linear-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent",
   specializationBadge: "inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-emerald-400 to-green-500 text-white rounded-full text-sm font-semibold shadow-lg",
   badgeIcon: "w-4 h-4",
